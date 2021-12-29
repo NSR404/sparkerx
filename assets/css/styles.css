@@ -609,6 +609,56 @@ a:hover ,a:focus{
   font-size: 20px;
 }
 
+/* Swiper */
+.swiper {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  width: 40%!important;
+  box-shadow:5px 7px 5px 2px #ff000079 ;
+  padding: 5px;
+
+}
+
+.items-swiper{
+  width: 100%!important;
+  height: 300px ;  
+}
+.items-swiper img:hover{
+ transform: scale(1.1);
+}
+
+.items-swiper img{
+  width: 100%!important;
+ height: 100%;
+ transition: 0.7s;
+
+}
+
+
+.content-item-swiper{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+ width: 50px;
+ height: 50px;
+}
+
+.rate-class-name{
+  position: absolute;
+  left:200px;
+  top: 170px;
+  display: flex;
+}
+
+
+
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);

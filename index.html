@@ -8,7 +8,8 @@
      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-
+       <!-- Link Swiper's CSS -->
+       <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- =====BOX ICONS===== -->
     <link
       href="../cdn.jsdelivr.net/npm/boxicons%402.0.5/css/boxicons.min.css"
@@ -217,60 +218,94 @@
       <section class="work section" id="work">
         <h2 class="section-title">My Front-End Design Work</h2>
   
-        <div class="work__container bd-grid">
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_7/" target="_blank">
-              <img src="assets/img/1_work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a
-              href="https://nsr404.github.io/Pro_4/"
-              target="_blank"
-            >
-              <img src="assets/img/2work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a
-              href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_15%20California/www.englishinteractive.net/"
-              target="_blank">
-              <img src="assets/img/3work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_9/" target="_blank">
-              <img src="assets/img/4work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_3/" target="_blank">
-              <img src="assets/img/5work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_5/" target="_blank">
-              <img src="assets/img/6work.png" alt="" />
-            </a>
-          </div>
-  
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_6/" target="_blank">
-              <img src="assets/img/7work.png" alt="" />
-            </a>
-          </div>
-          <div class="work__img">
-            <a href="https://nsr404.github.io/Pro_33_GLOY/" target="_blank">
-              <img src="assets/img/8work.png" alt="" />
-            </a>
-          </div>
-         
-          <div class="work__img">
-            <a href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_2/" target="_blank">
-              <img src="assets/img/9work.png" alt="" />
-            </a>
+<div class="work__container ">
+         <!-- Swiper -->
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide">
+              <div class="items-swiper">
+                  <a href="https://nsr404.github.io/Pro_7/" target="_blank">
+                    <img src="assets/img/1_work.png" alt="" />
+                  </a>
           </div>
         </div>
+    <div class="swiper-slide">
+          <div class="items-swiper">
+              <a
+                href="https://nsr404.github.io/Pro_4/"
+                target="_blank"
+              >
+                <img src="assets/img/2work.png" alt="" />
+              </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a
+            href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_15%20California/www.englishinteractive.net/"
+            target="_blank">
+            <img src="assets/img/3work.png" alt="" />
+          </a>
+
+  </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://nsr404.github.io/Pro_33_GLOY/" target="_blank">
+            <img src="assets/img/8work.png" alt="" />
+          </a>
+    </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://nsr404.github.io/Pro_9/" target="_blank">
+            <img src="assets/img/4work.png" alt="" />
+          </a>
+    </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://nsr404.github.io/Pro_3/" target="_blank">
+            <img src="assets/img/5work.png" alt="" />
+          </a>
+    </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://nsr404.github.io/Pro_5/" target="_blank">
+            <img src="assets/img/6work.png" alt="" />
+          </a>
+    </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://nsr404.github.io/Pro_6/" target="_blank">
+            <img src="assets/img/7work.png" alt="" />
+          </a>
+      
+    </div>
+    </div>
+ 
+    <div class="swiper-slide">
+      <div class="items-swiper">
+          <a href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_2/" target="_blank">
+            <img src="assets/img/9work.png" alt="" />
+          </a>
+      
+    </div>
+    </div>
+
+    <!--End Swiper  -->
+
+
+      
+
+</div>
+</div>
+
+
+
+
       </section>
     </main>
 
@@ -310,5 +345,26 @@
     <script src="assets/js/jquery.txt"></script>
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+      },
+    });
+    </script>
+
   </body>
 </html>
