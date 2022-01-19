@@ -219,8 +219,14 @@ a:hover ,a:focus{
     padding: 2rem;
     background-color: var(--second-color);
     transition: 0.5s;
+  }  .swiper {
+    width: 100%;
   }
+ 
 }
+
+
+
 .nav__item {
   margin-bottom: var(--mb-4);
   padding: 0 18px;
@@ -615,12 +621,14 @@ a:hover ,a:focus{
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
+.swiper-wrapper{
+  width: inherit;
+}
 .swiper-slide {
   background-position: center;
   background-size: cover;
   min-height: 300px;
-  width: 40%!important;
+  width: 50%!important;
   box-shadow:5px 7px 5px 2px #ff000079 ;
   padding: 6px;
 
@@ -736,6 +744,7 @@ box-shadow: 0 0 12px 1px #fa4700;
     width: 80px!important;
   }
 
+
   .nav {
     height: calc(var(--header-height) + 1rem);
   }
@@ -817,3 +826,8 @@ box-shadow: 0 0 12px 1px #fa4700;
     margin: auto !important;
   }
 }
+
+@media (min-width:320px) and (max-width:768px) {
+  .swiper-slide{
+    width: 74%!important;
+  }}
