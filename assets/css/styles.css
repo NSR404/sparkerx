@@ -20,6 +20,81 @@ input:focus ,button:focus , input:hover {
   outline: none!important;
 }
 
+
+/* cursor style */
+body {
+  margin: 0;
+  height: 100vh;
+  cursor: none;
+  background: var(--secondary-color);
+  z-index: 100!important;
+  overflow-x: hidden!important;
+  z-index: 0!important;
+}
+
+.cursor {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+ color: var(--secondary-color);
+  transition-duration: 90ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+  /* left: -1.5px; */
+  z-index: 100!important;
+}
+
+.cursor::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border: 8px solid var(--secondary-color);
+  border-radius: 50%;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.6);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.8);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(3);
+  }
+  75% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid var(--secondary-color);
+}
+
+
 /*===== Fuente y tipografia =====*/
 :root {
   --body-font: "Poppins", sans-serif;
