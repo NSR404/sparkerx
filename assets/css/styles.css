@@ -43,7 +43,7 @@ body {
   animation: cursorAnim .5s infinite alternate;
   pointer-events: none;
   /* left: -1.5px; */
-  z-index: 100!important;
+  z-index: 200!important;
 }
 
 .cursor::after {
