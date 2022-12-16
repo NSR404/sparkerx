@@ -26,7 +26,7 @@ body {
   margin: 0;
   height: 100vh;
   cursor: none;
-  background: var(--secondary-color);
+  background: #f00;
   z-index: 100!important;
   overflow-x: hidden!important;
   z-index: 0!important;
@@ -37,7 +37,7 @@ body {
   height: 25px;
   border-radius: 50%;
   position: absolute;
- color: var(--secondary-color);
+ color: #f00;
   transition-duration: 90ms;
   transition-timing-function: ease-out;
   animation: cursorAnim .5s infinite alternate;
@@ -51,7 +51,7 @@ body {
   width: 25px;
   height: 25px;
   position: absolute;
-  border: 8px solid var(--secondary-color);
+  border: 8px solid #f00;
   border-radius: 50%;
   top: -8px;
   left: -8px;
@@ -91,7 +91,7 @@ body {
 
 .expand {
   animation: cursorAnim3 .5s forwards;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid #f00;
 }
 
 
