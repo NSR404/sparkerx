@@ -20,7 +20,9 @@
     <title>SPARK</title>
   </head>
   <body>
-    
+       <!-- cursor -->
+   <div class="cursor"></div>
+  <!-- end cursor -->
     <div class="btn_direction b_pos"><i class="fa fa-arrow-up direction"></i></div>
     <!--===== HEADER =====-->
     <header class="l-header">
@@ -368,6 +370,24 @@
       },
     });
     </script>
+      
+      
+  <!-- cursor js -->
+  <script>
+    const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+      cursor.classList.remove("expand");
+  }, 500)
+})
+</script>
 
   </body>
 </html>
