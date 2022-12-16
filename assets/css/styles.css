@@ -95,6 +95,14 @@ body {
 }
 
 
+/* add hover for image header  */
+.home-image{
+  transition:0.8s;
+}
+section.home-section:hover .home-image{
+    transform: scale(1.1);
+    transition: all 0.8s;
+}
 /*===== Fuente y tipografia =====*/
 :root {
   --body-font: "Poppins", sans-serif;
