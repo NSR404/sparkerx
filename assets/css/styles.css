@@ -46,6 +46,28 @@ body {
   z-index: 200!important;
 }
 
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) and (max-width: 767.98px) { 
+  .cursor {
+  width: 0px;
+  height: 0px;
+/*   border-radius: 50%; */
+/*   position: absolute; */
+/*  color: #f00; */
+/*   transition-duration: 90ms; */
+/*   transition-timing-function: ease-out; */
+/*   animation: cursorAnim .5s infinite alternate; */
+/*   pointer-events: none; */
+  /* left: -1.5px; */
+/*   z-index: 200!important; */
+}
+  .cursor::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+}
+ }
+
 .cursor::after {
   content: "";
   width: 25px;
