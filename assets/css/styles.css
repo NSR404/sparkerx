@@ -5,9 +5,9 @@ body {
   height: 100vh;
   cursor: none;
   background: var(--secondary-color);
-  z-index: 100!important;
+  z-index: 10!important;
   overflow-x: hidden!important;
-  z-index: 0!important;
+  z-index: 10!important;
 }
 
 .cursor {
@@ -34,6 +34,7 @@ body {
   top: -8px;
   left: -8px;
   animation: cursorAnim2 .5s infinite alternate;
+   z-index: 100!important;
 }
 
 @keyframes cursorAnim {
@@ -69,6 +70,7 @@ body {
 .expand {
   animation: cursorAnim3 .5s forwards;
   border: 1px solid var(--secondary-color);
+   z-index: 100!important;
 }
 
 
