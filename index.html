@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    
+   <!-- Icons -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:wght@700;900&amp;display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
+    <!-- <link rel="stylesheet" href="assetscss/leaflet.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
        <!-- Link Swiper's CSS -->
        <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- =====BOX ICONS===== -->
-    <link
-      href="../cdn.jsdelivr.net/npm/boxicons%402.0.5/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="assets/img/029a2513-bfa8-4497-84a3-a0ac0212d773.jpg" />
 
-    <title>SPARK-X</title>
+    <!-- ==== image - Icon for website ===== -->
+    <link rel="icon" href="assets/img/icon-web/icon-sparker-x.png"/>
+
+    <title>Sparker X - Home</title>
   
 <!-- start  The Boot For contact whit customer   -->
  <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+var Tawk_API = Tawk_API||{} , Tawk_LoadStart = new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
@@ -35,23 +48,32 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
   <!-- end  The Boot For contact whit customer   -->
   </head>
-  <body>
+  <body onload="functionloading()" oncontextmenu="return false">
+
+  <!--start loading page -->
+  <div id="preloading" class="preloading">
+     <span>loading...</span>
+  </div>
+  <!--end loading page -->
+
        <!-- cursor -->
-   <div class="cursor"></div>
+   <!-- <div class="cursor"> -->
+    <!-- <i class="ri-cursor-line cursor"></i> -->
+  <!-- </div> -->
   <!-- end cursor -->
-    <div class="btn_direction b_pos"><i class="fa fa-arrow-up direction"></i></div>
-    <!--===== HEADER =====-->
+    <div class="btn_direction b_pos"><i class="ri-arrow-up-circle-fill"></i></div>
+    <!--=====Start HEADER =====-->
     <header class="l-header">
            <div class="container">
             <nav class="nav">
               <div class="brand-nav">
-                <a href="#" class="nav__logo"><b>S</b>PARK-X</a>
+                <a href="#" class="nav__logo"><b>S</b>parker<b>X</b></a>
               </div>
        
               <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="#home" class="nav__link active">Home</a>
+                    <a href="#" class="nav__link active">Home</a>
                   </li>
                   <li class="nav__item">
                     <a href="#about" class="nav__link">About</a>
@@ -60,7 +82,10 @@ s0.parentNode.insertBefore(s1,s0);
                     <a href="#skills" class="nav__link">Skills</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#work" class="nav__link">Work</a>
+                    <a href="#portfolio-section" class="nav__link">Projects</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#contact-section" class="nav__link">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -71,24 +96,30 @@ s0.parentNode.insertBefore(s1,s0);
             </nav>
            </div>
     </header>
-    <section class="home-section">
+    <!--=====End HEADER =====-->
+
+
+
+
+
+    <section class="home-section" id="home">
       <div class="row justify-content-center">
         <div class="col-md-6 col-lg-6 col-12 ">
-          <div class="home-text mt-5">
+          <div class="home-text mt-3">
             <h1 class="text-left home-title">
               Hi
               <br />We Are
              <span class="home-text-color">
-                <b>S</b>PARK</span>
+                <b>S</b>parker<b>X</b></span>
                 We work as web developers
             </h1>
-           <button class="btn btn_contact">
-            <a
-            href="contact.html" target="_blank"
-            class="button mt-3"
-            >Contact</a
-          >
+           <button class=" btn_contact"> <a href="contact.html" target="_self"
+          class="button">Contact</a>
            </button>
+
+           <!-- <button class="btn " style="background-color: red
+           ;">osfbobobvoub</button> -->
+           
           </div>
         </div>
         <div class="col-md-6 col-lg-6 col-12  home-image">
@@ -101,255 +132,449 @@ s0.parentNode.insertBefore(s1,s0);
     </section>
     <main class="l-main">
       <!--===== ABOUT =====-->
-      <section class="about section" id="about">
-        <h2 class="section-title" style="margin-top: 5rem">About</h2>
+      <section class="about section " id="about">
+        <h2 class="section-title">About</h2>
   
         <div class="about__container bd-grid">
           <div class="about__img">
-            <img src="assets/img/1.jpg" alt="" />
+            <img src="assets/img/groub-work.jpg" alt="" />
           </div>
   
-          <div>
-            <h2 class="about__subtitle"> We Are <b>S</b>PARK-X.</h2>
+          <div class="right_item_about">
+            <h2 class="about__subtitle"> We Are <b>S</b><strong>parker</strong><b>X</b> .</h2>
             <p class="about__text">
               Web Developer Specializing In Full Stack Development.Experienced
               With All Stages Of The Development Cycle For Dynamic Web Projects .
               <br/>
               <br/>
-              Well-Versed In Numerous Programming Languages Including HTML , HTML5 , CSS , CSS3 , JQUEY , JavaScript , Bootstrap , control panel , php , Laravel , java , c++.
+              Well-Versed In Numerous programming Languages Including HTML , HTML5 , CSS , CSS3 , JQUEY , JavaScript , Bootstrap , control panel , php , Laravel , java , c++.
               <br />
               Strong Background In Project Management And Customer Relations .
             </p>
           </div>
         </div>
       </section>
-  
+
+<!-- start scroll li in nav for section -->
+<div class="scroll_nav mb-5 pb-4" id="skills"></div>
+<!-- end scroll li in nav for section -->
+
       <!--===== SKILLS =====-->
-      <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
-  
-        <div class="skills__container bd-grid">
-          <div>
-            <h2 class="skills__subtitle">Profesional Skills</h2>
-            <p class="skills__text">
-              I have strong technical skills as well as excellent interpersonal
-              skills. I am eager to be challenged in order to grow and further
-              improve my Web Developer skills.
-              <br />
-              My greatest passion is in life is using my technical know-how to
-              benefit other people and organisations.
-            </p>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="fa fa-html5 skills__icon"></i>
-                <span class="skills__name">HTML5</span>
+<section class="skills-section" >
+  <h2 class="section-title">Skills</h2>
+ <div class="row skills__container ">
+  <div class="left-skills-section col-md-6 col-lg-6 col-12 ">
+    <div>
+      <h2 class="skills__subtitle">Profesional Skills</h2>
+      <p class="skills__text">
+        We have strong technical skills as well as excellent interpersonal skills. We are eager to challenge in order to develop and improve our skills in development and progression.
+        <br>
+        Our greatest passion in life is to use our technical knowledge to benefit people and institutions of all kinds and many more.
+      </p>
+    </div>
+   </div>
+   <div class="right-skills-section col-md-6 col-lg-6 col-12 ">
+    <div class="skills__data">
+      <div class="skills__names">
+        <span class="skills__name">HTML5</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">CSS3</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">SASS</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">Java Script &nbsp; &nbsp; &nbsp;</span>
+      </div>
+    </div>
+
+    <div class="skills__data">
+      <div class="skills__names">
+        <span class="skills__name">BootStrap</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">JQuery</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name ui_ux">UI/UX</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">Graphic Design</span>
+      </div>
+    </div>
+
+    <div class="skills__data">
+      <div class="skills__names">
+        <span class="skills__name">React.js</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">PHP</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">Laravel</span>
+      </div>
+      <div class="skills__names">
+        <span class="skills__name">Control panel</span>
+      </div>
+    </div>
+   </div>
+ </div>
+ 
+</section>
+
+<!-- start scroll li in nav for section -->
+   <div class="scroll_nav mb-5 pb-4" id="portfolio-section"></div>
+<!-- end scroll li in nav for section -->
+   
+   	<!-- PORTFOLIO SECTION -->
+	<section class="portfolio-section section-block">
+		<div class="container">
+			<div class="section-title">
+				<h2>Projects</h2>
+			</div><!-- .section-title -->
+			<div class="button-group filter-button-group">
+				<button class="active" data-filter="*">All</button>
+				<button class="" data-filter=".front_end">Front End Projects</button>
+				<button class="" data-filter=".back_end">Back End Projects</button>
+				<button class="" data-filter=".design">Design </button>
+				<!-- <button class="" data-filter=".application">Application</button> -->
+			</div>
+			<div class="row grid" data-aos="fade-up" data-aos-duration="2000">
+				<div class="col-lg-4 col-md-6 grid-item front_end Design">
+					<div class="box">
+			            <img src="assets/img/projects-img/11_work.png" alt="Project image">
+			            <div class="box-content">
+			            		<span class="category">Front End</span>
+			                <h3 class="title">Website design for Rainy Design</h3>
+			            </div>
+			            <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                    <i class="ri-add-line"></i>
+                   </a></div>
+
+
+
+			            <!-- Modal -->
+						<div class="modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+						  <div class=" modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+						    <div class="modal-content">
+                  <div class="modal-body">
+                    <!-- Trigger the modal with a button -->
+						      	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+						        <div class="row item-content">
+                        <div class="col-lg-9 col-9"> 
+                          <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                        </div>
+						        	<div class="col-lg-3 col-3 col-xl-3">
+						        		<div class="meta-wrapper">
+						        			<ul class="item-meta">
+						        				<li>Project Type: <span class="meta-value">Graphic Design</span></li>
+						        				<li>Client: <span class="meta-value">Juwel Khan</span></li>
+						        				<li>Duration: <span class="meta-value">2 Weeks</span></li>
+						        				<li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+						        				<li>Budget: <span class="meta-value">$2000</span></li>
+						        			</ul>
+						        		</div> 
+                        <!-- .meta-wrapper -->
+						        	</div>
+						        </div>
+                     <!-- .row -->
               </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                <span class="skills__percentage">98%</span>
-              </div>
-            </div>
-           
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="fa fa-css3 skills__icon"></i>
-                <span class="skills__name">CSS3</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage">97%</span>
-              </div>
-            </div>
-  
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="fa fa-javascript skills__icon"></i>
-                <span class="skills__name">JavaScript</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage">69%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="fa fa-css3 skills__icon"></i>
-                <span class="skills__name">BootStrap</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage">96%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="fa fa-javascript skills__icon"></i>
-                <span class="skills__name">JQuery</span>
-              </div>
-              <div class="skills__bar skills__jquery"></div>
-              <div>
-                <span class="skills__percentage">95%</span>
-              </div>
-            </div>       
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxs-paint skills__icon"></i>
-                <span class="skills__name">Control Panel</span>
-              </div>
-              <div class="skills__bar skills__cpanel"></div>
-              <div>
-                <span class="skills__percentage">92%</span>
-              </div>
-            </div>
-          </div>
-  
-          <div class="part__img_2">
-            <div class="bd-grid skilsback">
-              <div class="skills__data">
-                <div class="skills__names">
-                  <i class="fa fa-html5 skills__icon"></i>
-                  <span class="skills__name">Laravel</span>
-                </div>
-                <div class="skills__bar skills__laravel"></div>
-                <div>
-                  <span class="skills__percentage">77%</span>
-                </div>
-              </div>
-              <div class="skills__data">
-                <div class="skills__names">
-                  <i class="fa fa-html5 skills__icon"></i>
-                  <span class="skills__name">PHP</span>
-                </div>
-                <div class="skills__bar skills__php"></div>
-                <div>
-                  <span class="skills__percentage">78%</span>
-                </div>
-              </div>
-            </div>
-            <img src="assets/img/skils.jpg" alt="" class="skills__img" />
-           
-          </div>
-        </div>
-      </section>
-  
-      <!--===== WORK =====-->
- <section class="work section" id="work">
-      <h2 class="section-title">My Front-End Design Work</h2>
-    <div class="work__container ">
-      <!-- Swiper -->
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="items-swiper">
-                          <a href="https://nsr404.github.io/sam-taxi-booking/index.html" target="_blank">
-                            <img src="assets/img/sam-car.png" alt="image project" />
-                          </a>
+						      
+						    </div>
+						  </div>
+						</div>
+			        </div>
+				</div>
+  				<div class="col-lg-4 col-md-6 grid-item front_end application">
+					<div class="box">
+			            <img src="assets/img/projects-img/13_work.png" alt="portfolio image">
+			            <div class="box-content">
+			            		<span class="category">Front End</span>
+			                <h3 class="title">Come on babe light my fire</h3>
+			            </div>
+			            
+
+			            <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal5"><i class="ri-add-line"></i></a></div>
+
+			            <!-- Modal -->
+                  <div class="modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                      <div class="modal-content">
+                        
+                        <div class="modal-body">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                          <div class="row item-content">
+                            <div class="col-lg-9 col-9"> 
+                              <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                            </div>
+                          <div class="col-lg-3 col-3 col-xl-3">
+                            <div class="meta-wrapper">
+                              <ul class="item-meta">
+                                <li>Project Type: <span class="meta-value">Graphic Design</span></li>
+                                <li>Client: <span class="meta-value">Juwel Khan</span></li>
+                                <li>Duration: <span class="meta-value">2 Weeks</span></li>
+                                <li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+                                <li>Budget: <span class="meta-value">$2000</span></li>
+                              </ul>
+                            </div> 
+                            <!-- .meta-wrapper -->
+                          </div>
+                        </div>
+                        </div>
+                        
+                      </div>
                     </div>
-                    </div> 
-                        <div class="swiper-slide">
-                              <div class="items-swiper">
-                                  <a href="https://nsr404.github.io/technology-mind-way/" target="_blank">
-                                    <img src="assets/img/13work.png" alt="image project" />
-                                  </a>
-                            </div>
+                  </div>
+                    </div>
+              </div>
+
+				
+        <div class="col-lg-4 col-md-6 grid-item application front_end design">
+              <div class="box">
+                      <img src="assets/img/projects-img/12_work.png" alt="portfolio image">
+                      <div class="box-content">
+                        <span class="category">Design</span>
+                          <h3 class="title">When the musics over turn off the light</h3>
                       </div>
-                      <div class="swiper-slide">
-                                <div class="items-swiper">
-                                    <a href="https://nsr404.github.io/Pro_7/" target="_blank">
-                                      <img src="assets/img/1_work.png" alt="image project" />
-                                    </a>
-                            </div>
-                      </div>
-                    <div class="swiper-slide">
-                            <div class="items-swiper">
-                                <a
-                                  href="https://nsr404.github.io/Pro_4/"
-                                  target="_blank"
-                                >
-                                  <img src="assets/img/2work.png" alt="image project" />
-                                </a>
+                      <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal4"><i class="ri-add-line"></i></a></div>
+
+                      <!-- Modal -->
+                <div class="modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                        <div class="row item-content">
+                          <div class="col-lg-9 col-9"> 
+                            <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                          </div>
+                        <div class="col-lg-3 col-3 col-xl-3">
+                          <div class="meta-wrapper">
+                            <ul class="item-meta">
+                              <li>Project Type: <span class="meta-value">Graphic Design</span></li>
+                              <li>Client: <span class="meta-value">Juwel Khan</span></li>
+                              <li>Duration: <span class="meta-value">2 Weeks</span></li>
+                              <li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+                              <li>Budget: <span class="meta-value">$2000</span></li>
+                            </ul>
+                          </div> 
+                          <!-- .meta-wrapper -->
                         </div>
                       </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Ahmed-bashmakh/" target="_blank">
-                              <img src="assets/img/11work.png" alt="image project" />
-                            </a>
                       </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/cv/" target="_blank">
-                              <img src="assets/img/12work.png" alt="image project" />
-                            </a>
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Pro_33_GLOY/" target="_blank">
-                              <img src="assets/img/8work.png" alt="image project" />
-                            </a>
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Pro_3/" target="_blank">
-                              <img src="assets/img/5work.png" alt="" />
-                            </a>
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Pro_5/" target="_blank">
-                              <img src="assets/img/6work.png" alt="image project" />
-                            </a>
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Pro_6/" target="_blank">
-                              <img src="assets/img/7work.png" alt="image project" />
-                            </a>
-                        
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://nsr404.github.io/Pro_9/" target="_blank">
-                              <img src="assets/img/4work.png" alt="image project" />
-                            </a>
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_2/" target="_blank">
-                              <img src="assets/img/9work.png" alt="image project" />
-                            </a>
-                        
-                      </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="items-swiper">
-                            <a
-                              href="https://1okihqy2iw9s2pjvjazn6a-on.drv.tw/Pro_15%20California/www.englishinteractive.net/"
-                              target="_blank">
-                              <img src="assets/img/3work.png" alt="image project" />
-                            </a>
-
+                      
                     </div>
-                      </div>
-                      <!--End Swiper  -->
                   </div>
+                </div>
               </div>
-    </div>
-        <!-- end swiper -->
-<!-- end swiper -->
- </section>
+				</div>
+				<div class="col-lg-4 col-md-6 grid-item design front_end">
+					<div class="box">
+			            <img src="assets/img/projects-img/9_work.png" alt="portfolio image">
+			            <div class="box-content">
+			            		<span class="category">Application</span>
+			                <h3 class="title">She's got a smile that seems to me</h3>
+			            </div>
+			            <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal3"><i class="ri-add-line"></i></a></div>
+
+			            <!-- Modal -->
+						<div class="modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+						    <div class="modal-content">
+						      
+						      <div class="modal-body">
+						      	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                    <div class="row item-content">
+                      <div class="col-lg-9 col-9"> 
+                        <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                      </div>
+                    <div class="col-lg-3 col-3 col-xl-3">
+                      <div class="meta-wrapper">
+                        <ul class="item-meta">
+                          <li>Project Type: <span class="meta-value">Graphic Design</span></li>
+                          <li>Client: <span class="meta-value">Juwel Khan</span></li>
+                          <li>Duration: <span class="meta-value">2 Weeks</span></li>
+                          <li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+                          <li>Budget: <span class="meta-value">$2000</span></li>
+                        </ul>
+                      </div> 
+                      <!-- .meta-wrapper -->
+                    </div>
+                  </div>
+						      </div>
+						      
+						    </div>
+						  </div>
+						</div>
+			        </div>
+				</div>
+				<div class="col-lg-4 col-md-6 grid-item front_end design">
+					<div class="box">
+			            <img src="assets/img/projects-img/8_work.png" alt="portfolio image">
+			            <div class="box-content">
+			            		<span class="category">Front End</span>
+			                <h3 class="title">So close no matter how far</h3>
+			            </div>
+			            <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal2"><i class="ri-add-line"></i></a></div>
+
+			            <!-- Modal -->
+						<div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+						    <div class="modal-content">
+						      
+						      <div class="modal-body">
+						      	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                    <div class="row item-content">
+                      <div class="col-lg-9 col-9"> 
+                        <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                      </div>
+                    <div class="col-lg-3 col-3 col-xl-3">
+                      <div class="meta-wrapper">
+                        <ul class="item-meta">
+                          <li>Project Type: <span class="meta-value">Graphic Design</span></li>
+                          <li>Client: <span class="meta-value">Juwel Khan</span></li>
+                          <li>Duration: <span class="meta-value">2 Weeks</span></li>
+                          <li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+                          <li>Budget: <span class="meta-value">$2000</span></li>
+                        </ul>
+                      </div> 
+                      <!-- .meta-wrapper -->
+                    </div>
+                  </div>
+						      </div>
+						      
+						    </div>
+						  </div>
+						</div>
+			        </div>
+				</div>
+				<div class="col-lg-4 col-md-6 grid-item front_end design">
+					<div class="box">
+			            <img src="assets/img/projects-img/7_work.png" alt="portfolio image">
+			            <div class="box-content">
+			            		<span class="category">Front End</span>
+			                <h3 class="title">When you are stranger faces looks ugly</h3>
+			            </div>
+			            <div class="icon-box"><a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal1"><i class="ri-add-line"></i></a></div>
+
+			            <!-- Modal -->
+						<div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+						    <div class="modal-content">
+						      
+						      <div class="modal-body">
+						      	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                    <div class="row item-content">
+                      <div class="col-lg-9 col-9"> 
+                        <iframe src="https://nsr404.github.io/technology-mind-way/" frameborder="0" title="iframe website" width="100%" height="570px"></iframe>
+                      </div>
+                    <div class="col-lg-3 col-3 col-xl-3">
+                      <div class="meta-wrapper">
+                        <ul class="item-meta">
+                          <li>Project Type: <span class="meta-value">Graphic Design</span></li>
+                          <li>Client: <span class="meta-value">Juwel Khan</span></li>
+                          <li>Duration: <span class="meta-value">2 Weeks</span></li>
+                          <li>Task: <span class="meta-value">UI/UX, Frontend</span></li>
+                          <li>Budget: <span class="meta-value">$2000</span></li>
+                        </ul>
+                      </div> 
+                      <!-- .meta-wrapper -->
+                    </div>
+                  </div>
+						      </div>
+						      
+						    </div>
+						  </div>
+						</div>
+			        </div>
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	</section> <!-- .portfolio-section -->
+
+   
+    
+ 
 </main>
 
-    <!--===== FOOTER =====-->
+<!-- start scroll li in nav for section -->
+<div class="scroll_nav mb-5 pb-4" id="contact-section" ></div>
+<!-- end scroll li in nav for section -->
+
+	<!-- CONTACT SECTION -->
+	<section class="contact-section section-block" >
+		<div class="container">
+			<div class="section-title mb-5">
+				<h2>Get in Touch</h2>
+			</div><!-- .section-title -->
+
+			<div class="row contact-options">
+				<div class="col-lg-4 d-flex justify-content-xxl-center align-items-xl-center" data-aos="fade-down" data-aos-duration="1000">
+					<div class="icon-box"><i class="ri-map-pin-fill"></i></div>
+					<div class="content-wrapper">
+						<h4>Address</h4>
+						<address>Palestine , Gaza </address>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-xxl-center align-items-xl-center mt-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+					<div class="icon-box"><i class="ri-phone-line"></i></div>
+					<div class="content-wrapper">
+						<h4>Phone</h4>
+						<a href="https://wa.me/970569828777">+970569828777</a>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-xxl-center align-items-xl-center mt-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
+					<div class="icon-box"><i class="ri-mail-line"></i></div>
+					<div class="content-wrapper">
+						<h4>Email</h4>
+						<a href="mailto:info@sparkerx.com">info@sparkerx.com</a>
+					</div>
+				</div>
+			</div> <!-- .row -->
+
+			<div class="row div_map__form">
+				<div class="col-lg-6">
+				     <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1734627.1467476718!2d33.76791561034388!3d31.880948977014228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cf2d28866bdd9%3A0xee17a001d166f686!2sPalestine!5e0!3m2!1sen!2s!4v1678216775133!5m2!1sen!2s" width="100%" height="100%" style="border-radius: 7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+				</div>
+				<div class="col-lg-6 form-block mt-3" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1100">
+					<h3>Write me a message .</h3>
+					<div class="form-message">
+						<p></p>
+					</div>
+					<form class="row g-3" id="fungi-contact" method="POST" >
+						<div class="col-md-6">
+							<div class="input-group mb-3">
+								<label for="inputName" class="form-label visually-hidden">Name</label>
+		   						<input type="text" class="form-control" id="inputName" placeholder="Name*" name="inputName" required>
+	   						</div>
+	   					</div>
+	   					<div class="col-md-6">
+
+	   						<div class="input-group mb-3">
+								<label for="inputEmail" class="form-label visually-hidden">Email</label>
+		   						<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email*" required>
+	   						</div>
+   						
+						</div> 
+						<div class="col-md-12">
+							<label for="inputMessage" class="form-label visually-hidden">Message</label>
+	   						<textarea class="form-control mb-3" id="inputMessage" name="inputMessage" placeholder="Your message here*" required></textarea>
+	   						<button type="submit" class="btn btn-main" name="submit">Send Message</button>
+						</div>
+					</form> <!-- .row -->
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	</section> <!-- .contact-section -->
+
+
+    <!--=====Start  FOOTER =====-->
     <footer class="footer">
-      <p class="footer__title"><b>S</b>PARK-X</p>
+      <p class="footer__title"><b>S</b>parker<b>X</b></p>
       <div class="footer__social">
        
         <a
@@ -358,7 +583,7 @@ s0.parentNode.insertBefore(s1,s0);
         class="footer__icon"
         ><img class="icons_contact" src="assets/img/watsap.jpg" alt=""></a>
         <a
-          href="https://www.instagram.com/s_park404/"
+          href="#"
           target="_blank"
           class="footer__icon"
           ><img class="icons_contact" src="assets/img/instgram.jpg" alt=""></a>
@@ -368,48 +593,66 @@ s0.parentNode.insertBefore(s1,s0);
           class="footer__icon"
           ><img class="icons_contact" src="assets/img/app-icons-twitter.png" alt=""></a>
           <a
-          href="#"
+          href="https://www.linkedin.com/in/nsr-wadi-129b83211/"
           class="footer__icon"
           ><img class="icons_contact" src="assets/img/linlden.png" alt=""></a>
        
-          <!-- <a
-          href="https://www.facebook.com/ENGNSRWADI"
+          <a
+          href="#"
           target="_blank"
            class="footer__icon"
            ><img class="icons_contact" src="assets/img/facebook.jpg" alt="">
-          </a> -->
+          </a>
         
       </div>
-      <p class="scrollreveal">&#169; 2021 copyright all right reserved || Designed by <a href="https://nsr404.github.io/cv-spark/" class="url_nsr_wadi">NSR WADI </a>.</p>
+      <p class="scrollreveal">&#169; 2021 copyright all right reserved || Designed by <a href="https://nsr404.github.io/cv-spark/" class="name__company"><b>S</b>parker<b>X</b> </a>.</p>
     </footer>
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.txt"></script>
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
+    <!--=====End  FOOTER =====-->
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-      },
+       var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+          },
+          loop: true
     });
     </script>
-      
-      
+
+
+<!--start no-inspect -> js -->
+<script>
+  document.onkeydown = function(e) {
+     if (event.keyCode == 123) {
+       return false;
+     }
+     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0) ) {
+      return false;
+     }
+     if (e.ctrlKey && e.shiftKey && e.KeyCode == 'J'.charCodeAt(0)) {
+      return false;
+     }
+     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      return false;
+     }
+  }  
+   
+</script>
+<!--end no-inspect -> js -->
+
+
+
+
 <!-- start cursor js -->
   <script>
     const cursor = document.querySelector('.cursor');
@@ -428,6 +671,41 @@ document.addEventListener('click', () => {
 </script>
 <!-- end cursor js -->
 
+  <!--start loading page -> js -->
+<script>
+   var preloading = document.getElementById("preloading");
+   function functionloading(){
+    preloading.style.display = "none";
+   }
+</script>
+  <!--end loading page -> js -->
 
+
+      
+      
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.txt"></script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <!--=====end MAIN JS =====-->
+
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/leaflet.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/jquery.preloadinator.min.js"></script>
+<script src="assets/js/vanilla-tilt.min.js"></script>
+<script src="assets/js/typer.js"></script> 
+<script src="assets/js/script.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>

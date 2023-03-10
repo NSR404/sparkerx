@@ -66,8 +66,8 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
   origin: "top",
-  distance: "60px",
-  duration: 2000,
+  distance: "55px",
+  duration: 1900,
   reset: false,
 });
 
@@ -145,10 +145,23 @@ ScrollReveal().reveal('',{
    easing :  'ease-in-out' ,    // ease , ease-in , ease-out , ease-in-out 
  });
 
- ScrollReveal().reveal('.home-title , .about__img , .btn_contact , .section-title , .footer__title , .icons_contact , .scrollreveal , .contact_item',{ 
+ ScrollReveal().reveal('.home-title , .about__img , .btn_contact , .section-title , .footer__title , .icons_contact  , .contact_item',{ 
   origin : 'bottom' ,
-  distance: "100px",
-   duration: 1400,
+  distance: "50px",
+   duration: 1000,
+   interval: 100 ,
+   opacity: 0 ,
+   delay: 400 ,
+   reset: false,
+   disktop:true ,
+   mobile : true,
+   easing :  'ease-in-out' ,    // ease , ease-in , ease-out , ease-in-out 
+ });
+
+ ScrollReveal().reveal('.scrollreveal',{ 
+  origin : 'bottom' ,
+  distance: "20px",
+   duration: 1300,
    interval: 100 ,
    opacity: 0 ,
    delay: 400 ,
@@ -159,5 +172,30 @@ ScrollReveal().reveal('',{
  });
 
 
+
+ /* checking active filter */
+// change is-checked class on buttons
+var buttonGroups = document.querySelectorAll('.button-group');
+for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+var buttonGroup = buttonGroups[i];
+radioButtonGroup( buttonGroup );
+}
+
+function radioButtonGroup( buttonGroup ) {
+buttonGroup.addEventListener( 'click', function( event ) {
+// only work with buttons
+if ( !matchesSelector( event.target, 'button' ) ) {
+  return;
+}
+buttonGroup.querySelector('.active').classList.remove('active');
+event.target.classList.add('active');
+});
+}
+
+
+
+
  
 
+
+ 
