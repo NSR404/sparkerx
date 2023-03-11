@@ -18,6 +18,10 @@
   inline-size: auto;
 }
 
+.container{
+  /* width: 1062px!important; */
+}
+
 a , a:hover a:focus{
   text-decoration: none;
 }
@@ -273,10 +277,11 @@ a:hover ,a:focus{
       padding: 5px 0;
     }
     .nav {
-      display: flex;
+      display: flex!important;
       justify-content: center;
       align-items: center;
       padding-bottom: 7px;
+      width: 100%;
     }
     .brand-nav{
       width: auto;
