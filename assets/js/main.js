@@ -105,9 +105,9 @@ sr.reveal(".contact__input", { interval: 200 });
 
 ScrollReveal().reveal('.brand-nav',{ 
   origin : 'left' ,
-  distance: "100px",
+  distance: "80px",
    duration: 1500,
-   interval: 100 ,
+   interval: 90 ,
    opacity: 0 ,
    delay: 0 ,
    reset: false,
@@ -123,7 +123,7 @@ ScrollReveal().reveal('',{
   origin : 'left' ,
   distance: "100px",
    duration: 1500,
-   interval: 100 ,
+   interval: 90 ,
    opacity: 0 ,
    delay: 600 ,
    reset: false,
@@ -132,11 +132,11 @@ ScrollReveal().reveal('',{
    easing :  'ease-in-out' ,    // ease , ease-in , ease-out , ease-in-out 
  });
 
- ScrollReveal().reveal('.img-home , .about__subtitle , .about__text , .nav__item',{ 
+ ScrollReveal().reveal('.img-home  , .nav__item',{ 
   origin : 'right' ,
-  distance: "120px",
+  distance: "55px",
    duration: 1400,
-   interval: 100 ,
+   interval: 40 ,
    opacity: 0 ,
    delay: 500 ,
    reset: false,
@@ -145,11 +145,11 @@ ScrollReveal().reveal('',{
    easing :  'ease-in-out' ,    // ease , ease-in , ease-out , ease-in-out 
  });
 
- ScrollReveal().reveal('.home-title , .about__img , .btn_contact , .section-title , .footer__title , .icons_contact  , .contact_item',{ 
+ ScrollReveal().reveal('.home-title , .about__img , .btn_contact , .about__text , .section-title , .footer__title , .icons_contact , .about__subtitle , .contact_item',{ 
   origin : 'bottom' ,
   distance: "50px",
-   duration: 1000,
-   interval: 100 ,
+   duration: 900,
+   interval: 30 ,
    opacity: 0 ,
    delay: 400 ,
    reset: false,
