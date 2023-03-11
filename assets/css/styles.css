@@ -258,6 +258,7 @@ a:hover ,a:focus{
 
 .brand-nav{
   margin-left: 0!important;
+  width: 50%;
 }
 
 
@@ -275,13 +276,26 @@ a:hover ,a:focus{
     .l-header{
       padding: 5px 0;
     }
-    .nav {
+    .brand-nav {
+      width: 100%!important;
       display: flex!important;
       justify-content: center;
       align-items: center;
-      padding-bottom: 7px;
-      width: 100%;
     }
+
+    .brand-nav  .nav__logo{
+     
+      padding-bottom: 7px;
+      /* position: fixed; */
+      /* top: 0; */
+      /* left: 0; */
+      /* margin: auto; */
+    }
+
+    .nav__menu{
+      display: none!important;
+    }
+ 
     .brand-nav{
       width: auto;
     }
@@ -393,14 +407,11 @@ a:hover ,a:focus{
  @media (min-width: 1366px) { 
   .brand-nav{
     width: 40%;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   }
  
- /*  Extra large devices (large desktops, 1200px and up) */
- @media (min-width: 1200px) { 
-   
-  }  
+
  
 
 
