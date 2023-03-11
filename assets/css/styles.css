@@ -277,27 +277,24 @@ a:hover ,a:focus{
       padding: 5px 0;
     }
     .brand-nav {
-      width: 100%!important;
       display: flex!important;
       justify-content: center;
       align-items: center;
+      margin: auto!important;
     }
 
     .brand-nav  .nav__logo{
      
       padding-bottom: 7px;
-      /* position: fixed; */
-      /* top: 0; */
-      /* left: 0; */
-      /* margin: auto; */
     }
 
     .nav__menu{
       display: none!important;
     }
  
-    .brand-nav{
-      width: auto;
+    .nav{
+      padding-left: inherit!important;
+      display: inline-block!important;
     }
     .about__subtitle{
          font-size: 26px!important;

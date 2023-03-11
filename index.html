@@ -678,6 +678,11 @@ document.addEventListener('click', () => {
     preloading.style.display = "none";
     // $('body').css("overflow" , "auto");
    }
+
+   $(window).load(function() {
+    // $('body').style.overflow = "auto";
+    $('.preloading').fadeOut(1000);
+   });
 </script>
   <!--end loading page -> js -->
 
