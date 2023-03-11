@@ -267,6 +267,9 @@ a:hover ,a:focus{
   body{
     overflow-x: hidden!important;
   }
+      .container{
+    width: 100%!important;
+  }
     .nav__item{
       display: none!important;
     }
